@@ -2,6 +2,9 @@ package com.company;
 
 import java.util.Scanner;
 
+// Time Complexity - O(log n)
+// Space Complexity - O(1)
+
 public class DSA_BinarySearch {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -12,8 +15,9 @@ public class DSA_BinarySearch {
         }
         int x = scan.nextInt();
         System.out.println(binSearchRecursive(arr,0,n-1,x));
-        System.out.println(binsearchIterative(arr,x));
+        System.out.println(binSearchIterative(arr,x));
     }
+
 //  Recursive Approach
     public static int binSearchRecursive(int[] arr, int left, int right, int x){
         if(left>right){
@@ -32,7 +36,7 @@ public class DSA_BinarySearch {
     }
 
 //  Iterative Approach
-    public static int binsearchIterative(int[] arr, int x){
+    public static int binSearchIterative(int[] arr, int x){
         int left = 0;
         int right = arr.length-1;
         while(left<=right){
